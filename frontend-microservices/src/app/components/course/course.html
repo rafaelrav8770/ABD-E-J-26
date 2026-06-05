@@ -1,0 +1,23 @@
+<h2>Lista de cursos</h2>
+
+<p>{{ courses().length }}</p>
+
+<table border="1">
+
+  <tr>
+    <th>ID</th>
+    <th>Nombre</th>
+    <th>Profesor</th>
+  </tr>
+
+  @for (course of courses(); track course.id) {
+
+  <tr>
+    <td>{{course.id}}</td>
+    <td>{{course.name}}</td>
+    <td>{{course.teacher}}</td>
+  </tr>
+
+  }
+
+</table>
